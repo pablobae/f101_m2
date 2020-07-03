@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+      <add id="Pablobaenas_PickupSystem::pickupsystem" title="Pickup System" module="Pablobaenas_PickupSystem" sortOrder="51" resource="Pablobaenas_PickupSystem::pickupsystem"/>
+      <add id="Pablobaenas_PickupSystem::manage" title="Manage Pickups" module="Pablobaenas_PickupSystem" sortOrder="10" action="pickupsystem/pickups/index" resource="Pablobaenas_PickupSystem::manage" parent="Pablobaenas_PickupSystem::pickupsystem"/>
+    </menu>
+</config>
