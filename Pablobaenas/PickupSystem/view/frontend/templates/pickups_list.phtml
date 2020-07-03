@@ -1,0 +1,19 @@
+<p><?php echo __('Pickup Points');?></p>
+<table>
+    <tr>
+        <td>ID</td>
+        <td><?php echo __('Pickup Point');?></td>
+        <td><?php echo __('Latitude');?></td>
+        <td><?php echo __('Longitude');?></td>
+        <td><?php echo __('Shipping Method');?></td>
+    </tr>
+    <?php foreach ($block->getPickupsItems() as $item): ?>
+        <tr>
+            <td><?php echo $item->getId(); ?></td>
+            <td><?php echo $item->getName();?></td>
+            <td><?php echo $item->getLatitude();?></td>
+            <td><?php echo $item->getLongitude();?></td>
+            <td><?php echo $item->getShippingMethod();?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>

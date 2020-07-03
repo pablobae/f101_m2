@@ -25,4 +25,11 @@ class Pickups extends \Magento\Framework\Model\AbstractModel implements \Magento
 
         return $values;
     }
+
+    public function getGoogleMapsURL()
+    {
+        $google_maps_url ='https://maps.google.com/?q=';
+
+        return $google_maps_url . $this->getLatitude() . ',' . $this->getLongitude();
+    }
 }
