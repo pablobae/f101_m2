@@ -12,6 +12,7 @@ class Form extends Generic
      * @var Pablobaenas\PickupSystem\Model\PickupsFactory
      */
     protected $pickupsFactory;
+    protected $shippingMethod;
 
     /**
      * @param \Magento\Backend\Block\Template\Context $context
@@ -25,9 +26,11 @@ class Form extends Generic
         \Magento\Framework\Registry $registry,
         \Magento\Framework\Data\FormFactory $formFactory,
         \Pablobaenas\PickupSystem\Model\PickupsFactory $pickupsFactory,
+        \Pablobaenas\PickupSystem\Model\Source\ShippingMethod $shippingMethod,
         array $data = []
     ) {
         $this->pickupsFactory = $pickupsFactory;
+        $this->shippingMethod = $shippingMethod;
         parent::__construct($context, $registry, $formFactory, $data);
     }
 
@@ -85,12 +88,15 @@ class Form extends Generic
 
         $fieldset->addField(
             'shipping_method',
-            'text',
+            'select',
             [
+                'id' => 'shipping_method',
                 'name' => 'shipping_method',
                 'label' => __('Shipping Method'),
                 'title' => __('Shipping Method'),
+                'values' => $this->shippingMethod->toOptionArray(),
                 'required' => true
+
             ]
         );
 
