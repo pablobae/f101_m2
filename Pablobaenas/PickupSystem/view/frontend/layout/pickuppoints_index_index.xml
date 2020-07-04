@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Pickup Points</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Cms\Block\Block" name="pickuppoints_header"><arguments>
+                <argument name="block_id" xsi:type="string">pickuppoints_header</argument>
+            </arguments>
+            </block>
+            <block class="Pablobaenas\PickupSystem\Block\PickupsList" name="pickupsList" template="Pablobaenas_PickupSystem::pickuppoints_list.phtml" />
+        </referenceContainer>
+    </body>
+</page>
