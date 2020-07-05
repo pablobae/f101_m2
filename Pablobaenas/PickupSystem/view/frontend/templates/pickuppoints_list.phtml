@@ -8,8 +8,9 @@
     </thead>
     <tbody>
     <?php
-    foreach ($block->getPickupsItems() as $item) {
-        if ($item->isEnabled()) { ?>
+    $pickupPoints = $block->getEnabledPickupsItems();
+
+    foreach ($pickupPoints as $item) { ?>
             <tr>
                 <td><?php echo $item->getName(); ?></td>
                 <td><?php echo $item->getShippingMethod(); ?></td>
@@ -18,7 +19,13 @@
                        target="_blank"><?php echo __('Open in Google Maps'); ?></a>
                 </td>
             </tr>
-        <?php }
+        <?php
     } ?>
     </tbody>
 </table>
+
+<?php
+    if ($pickupPoints->getSize() == 0) {
+        echo __('There are no pickup points available');
+    }?>
+

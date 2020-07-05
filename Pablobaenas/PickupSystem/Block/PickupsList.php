@@ -56,4 +56,11 @@ class PickupsList extends Template
         }
         return $this->pickupsCollection->addOrder('shipping_method', 'ASC');
     }
+    public function getEnabledPickupsItems()
+    {
+        if (null === $this->pickupsCollection) {
+            $this->pickupsCollection = $this->pickupsCollectionFactory->create();
+        }
+        return $this->pickupsCollection->addFilter('status', '1')->addOrder('shipping_method', 'ASC');
+    }
 }
