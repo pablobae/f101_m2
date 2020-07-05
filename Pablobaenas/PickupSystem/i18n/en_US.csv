@@ -1,0 +1,33 @@
+"New Pickup Point","New Pickup Point"
+"Edit Pickup Point","Edit Pickup Point"
+"Pickup Point Information","Pickup Point Information"
+Name,Name
+Latitude,Latitude
+Longitude,Longitude
+"Shipping Method","Shipping Method"
+Status,Status
+"The pickup point has been deleted.","The pickup point has been deleted."
+"We can't find a listing to delete.","We can't find a listing to delete."
+"Pickup Points","Pickup Points"
+"%1 pickup point(s) have been deleted.","%1 pickup point(s) have been deleted."
+"Saved Pickup Point.","Saved Pickup Point."
+Enabled,Enabled
+Disabled,Disabled
+Edit,Edit
+Delete,Delete
+"Delete ${ $.$data.name }","Delete ${ $.$data.name }"
+"Are you sure you wan't to delete a ${ $.$data.name } record?","Are you sure you wan't to delete a ${ $.$data.name } record?"
+"Pickup Point","Pickup Point"
+"Open in Google Maps","Open in Google Maps"
+"There are no pickup points available","There are no pickup points available"
+"Add Pickup Point","Add Pickup Point"
+ID,ID
+from,from
+From,From
+to,to
+To,To
+"Delete Pickup Point","Delete Pickup Point"
+"Are you sure you wan't to delete selected items?","Are you sure you wan't to delete selected items?"
+"Pickup ID","Pickup ID"
+Created,Created
+Modified,Modified
