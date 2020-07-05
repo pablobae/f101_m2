@@ -9,7 +9,6 @@
 namespace Pablobaenas\PickupSystem\Block;
 
 use Magento\Framework\View\Element\Template;
-use Magento\Store\Model\ScopeInterface;
 use Pablobaenas\PickupSystem\Model\ResourceModel\Pickups\Collection;
 
 class PickupsList extends Template
@@ -46,7 +45,6 @@ class PickupsList extends Template
         );
     }
 
-
     /**
      * Get Pickups Items Collection
      * @return Collection
@@ -56,6 +54,6 @@ class PickupsList extends Template
         if (null === $this->pickupsCollection) {
             $this->pickupsCollection = $this->pickupsCollectionFactory->create();
         }
-        return $this->pickupsCollection;
+        return $this->pickupsCollection->addOrder('shipping_method', 'ASC');
     }
 }
