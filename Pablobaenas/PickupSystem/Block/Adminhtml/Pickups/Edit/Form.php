@@ -2,7 +2,6 @@
 
 namespace Pablobaenas\PickupSystem\Block\Adminhtml\Pickups\Edit;
 
-use Magento\Customer\Controller\RegistryConstants;
 use Magento\Backend\Block\Widget\Form\Generic;
 
 class Form extends Generic
@@ -37,7 +36,6 @@ class Form extends Generic
         parent::__construct($context, $registry, $formFactory, $data);
     }
 
-
     protected function _prepareLayout()
     {
         parent::_prepareLayout();
@@ -46,13 +44,12 @@ class Form extends Generic
         $form = $this->_formFactory->create();
 
         $id = $this->_coreRegistry->registry('current_id');
-        /** @var \Pablobaenas\PickupSystem\Model\PickupsFactory $pickups */
+        /** @var PickupsFactory $pickups */
         if ($id === null) {
             $pickups = $this->pickupsFactory->create();
         } else {
             $pickups = $this->pickupsFactory->create()->load($id);
         }
-
 
         $fieldset = $form->addFieldset('base_fieldset', ['legend' => __('Pickup Point Information')]);
 
@@ -99,7 +96,6 @@ class Form extends Generic
                 'title' => __('Shipping Method'),
                 'values' => $this->shippingMethod->toOptionArray(),
                 'required' => true
-
             ]
         );
 
@@ -118,25 +114,19 @@ class Form extends Generic
         );
 
         if ($pickups->getId() !== null) {
-            // If edit add id
             $form->addField('id', 'hidden', ['name' => 'id', 'value' => $pickups->getId()]);
         }
 
-        if ($this->_backendSession->getDemoData()) {
-            $form->addValues($this->_backendSession->getDemoData());
-            $this->_backendSession->setDemoData(null);
-        } else {
-            $form->addValues(
-                [
-                    'id' => $pickups->getId(),
-                    'name' => $pickups->getName(),
-                    'latitude' => $pickups->getLatitude(),
-                    'longitude' => $pickups->getLongitude(),
-                    'shipping_method' => $pickups->getShippingMethod(),
-                    'status' => $pickups->getStatus(),
-                ]
-            );
-        }
+        $form->addValues(
+            [
+                'id' => $pickups->getId(),
+                'name' => $pickups->getName(),
+                'latitude' => $pickups->getLatitude(),
+                'longitude' => $pickups->getLongitude(),
+                'shipping_method' => $pickups->getShippingMethod(),
+                'status' => $pickups->getStatus(),
+            ]
+        );
 
         $form->setUseContainer(true);
         $form->setId('edit_form');
