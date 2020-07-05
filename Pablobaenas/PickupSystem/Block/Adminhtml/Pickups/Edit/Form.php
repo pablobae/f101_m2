@@ -71,7 +71,8 @@ class Form extends Generic
                 'name' => 'latitude',
                 'label' => __('Latitude'),
                 'title' => __('Latitude'),
-                'required' => true
+                'required' => true,
+                'class' => 'validate-number'
             ]
         );
 
@@ -82,7 +83,8 @@ class Form extends Generic
                 'name' => 'longitude',
                 'label' => __('Longitude'),
                 'title' => __('Longitude'),
-                'required' => true
+                'required' => true,
+                'class' => 'validate-number'
             ]
         );
 
