@@ -3,7 +3,7 @@
  ## Installation
 Go to the **app/code/** folder of your **M2 project** and clone this repo.
  
- `git clone git@github.com:pablobae/f101_m2.git`
+ `git clone git@github.com:pablobae/f101_m2.git .`
  
  
  Install the module executing the following instructions : 
