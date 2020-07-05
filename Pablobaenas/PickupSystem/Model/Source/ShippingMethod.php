@@ -1,7 +1,7 @@
 <?php
 namespace Pablobaenas\PickupSystem\Model\Source;
 
-class ShippingMethod extends \Magento\Shipping\Model\Config\Source\Allmethods implements \Magento\Framework\Data\OptionSourceInterface
+class ShippingMethod extends \Magento\Shipping\Model\Config\Source\Allmethods
 {
 
     /**
@@ -11,7 +11,6 @@ class ShippingMethod extends \Magento\Shipping\Model\Config\Source\Allmethods im
      */
     public function toOptionArray($isActiveOnlyFlag = true)
     {
-
         $methods = [['value' => '', 'label' => '']];
         $carriers = $this->_shippingConfig->getAllCarriers();
         foreach ($carriers as $carrierCode => $carrierModel) {
@@ -27,7 +26,6 @@ class ShippingMethod extends \Magento\Shipping\Model\Config\Source\Allmethods im
                 \Magento\Store\Model\ScopeInterface::SCOPE_STORE
             );
             $methods[$carrierCode] = ['label' => $carrierTitle, 'value' => $carrierCode ];
-
         }
         return $methods;
     }
