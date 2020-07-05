@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="pablobaenas_pickup_system" resource="default" engine="innodb"
+           comment="Pickup System Table">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="Pickup Point ID"/>
+        <column xsi:type="varchar" name="name" length="255" nullable="false"  comment="Pickup Point Name"/>
+        <column xsi:type="decimal" name="latitude"  precision="10" scale="8" unsigned="false" nullable="false" comment="Pickup Point Latitude"/>
+        <column xsi:type="decimal" name="longitude"  precision="11" scale="8" unsigned="false" nullable="false" comment="Pickup Point Longitude"/>
+        <column xsi:type="varchar" name="shipping_method" length="255"  nullable="false" comment="Shipping Method"/>
+        <column xsi:type="smallint" name="status" padding="10" unsigned="false" nullable="false" identity="false" comment="Status code"/>
+        <column xsi:type="datetime" name="created_at" on_update="false" default="CURRENT_TIMESTAMP" nullable="false" comment="Creation datetime"/>
+        <column xsi:type="datetime" name="updated_at" on_update="true" default="CURRENT_TIMESTAMP" nullable="false" comment="Update datetime"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>
