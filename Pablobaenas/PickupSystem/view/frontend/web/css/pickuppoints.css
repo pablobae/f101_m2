@@ -1,0 +1,37 @@
+table.pickuppoints {
+    border-collapse: collapse;
+    background: white;
+    overflow: hidden;
+    width: 100%;
+    margin: 40px auto;
+}
+
+table.pickuppoints td, table.pickuppoints th {
+    padding-left: 8px;
+}
+table.pickuppoints thead tr {
+    background: #7d7d7d;
+    color: #fff;
+    font-weight: bold;
+}
+
+table.pickuppoints tbody tr {
+    min-height: 40px;
+}
+table.pickuppoints tbody tr:last-child {
+    border: 0;
+}
+table.pickuppoints td, table.pickuppoints th {
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tbody tr {
+    color: #808080;
+    line-height: 1.2;
+    font-weight: unset;
+}
+

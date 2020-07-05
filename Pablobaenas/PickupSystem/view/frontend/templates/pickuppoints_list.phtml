@@ -1,23 +1,24 @@
-<table>
-    <tr>
-        <td><?php echo __('ID'); ?></td>
-        <td><?php echo __('Pickup Point'); ?></td>
-        <td><?php echo __('Shipping Method'); ?></td>
-        <td></td>
-    </tr>
+<table class="pickuppoints">
+    <thead>
+        <tr>
+            <td><?php echo __('Pickup Point'); ?></td>
+            <td><?php echo __('Shipping Method'); ?></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
     <?php
     foreach ($block->getPickupsItems() as $item) {
         if ($item->isEnabled()) { ?>
             <tr>
-                <td><?php echo $item->getId(); ?></td>
                 <td><?php echo $item->getName(); ?></td>
                 <td><?php echo $item->getShippingMethod(); ?></td>
                 <td>
                     <a href="<?php echo $item->getGoogleMapsURL(); ?>" title="<?php echo __('Open in Google Maps'); ?>"
                        target="_blank"><?php echo __('Open in Google Maps'); ?></a>
                 </td>
-
             </tr>
         <?php }
     } ?>
+    </tbody>
 </table>
