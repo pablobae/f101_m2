@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Action class to save new pickup points
+ *
+ * @package Pablobaenas_PickupSystem
+ * @author  Pablo Baenas
+ * @created 2020-07-03
+ */
 namespace Pablobaenas\PickupSystem\Controller\Adminhtml\Pickups;
 
 use Magento\Backend\App\Action;

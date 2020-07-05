@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Database setup class
+ *
+ * @package Pablobaenas_PickupSystem
+ * @author  Pablo Baenas
+ * @created 2020-07-03
+ */
 namespace Pablobaenas\PickupSystem\Setup;
 
 class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface

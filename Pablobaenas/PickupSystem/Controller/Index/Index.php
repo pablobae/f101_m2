@@ -1,6 +1,6 @@
 <?php
 /**
- * List contents of pablobaenas_pickupsystem table
+ * Default frontend controller
  *
  * @package Pablobaenas_PickupSystem
  * @author  Pablo Baenas

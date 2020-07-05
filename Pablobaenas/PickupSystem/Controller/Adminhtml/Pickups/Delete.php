@@ -1,11 +1,22 @@
 <?php
-
+/**
+ * Action class Delete
+ *
+ * @package Pablobaenas_PickupSystem
+ * @author  Pablo Baenas
+ * @created 2020-07-03
+ */
 namespace Pablobaenas\PickupSystem\Controller\Adminhtml\Pickups;
 
 use Magento\Backend\App\Action;
 
+/**
+ * Class Delete
+ * @package Pablobaenas\PickupSystem\Controller\Adminhtml\Pickups
+ */
 class Delete extends Action
 {
+
 
     protected function _isAllowed()
     {

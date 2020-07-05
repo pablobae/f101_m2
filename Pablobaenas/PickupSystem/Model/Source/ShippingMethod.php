@@ -1,4 +1,11 @@
 <?php
+/**
+ * Source class of the atribute ShippingMethod
+ *
+ * @package Pablobaenas_PickupSystem
+ * @author  Pablo Baenas
+ * @created 2020-07-03
+ */
 namespace Pablobaenas\PickupSystem\Model\Source;
 
 class ShippingMethod extends \Magento\Shipping\Model\Config\Source\Allmethods
@@ -6,7 +13,6 @@ class ShippingMethod extends \Magento\Shipping\Model\Config\Source\Allmethods
 
     /**
      * Retrieve status options array.
-     *
      * @return array
      */
     public function toOptionArray($isActiveOnlyFlag = true)

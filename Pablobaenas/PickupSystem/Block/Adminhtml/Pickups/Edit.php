@@ -5,6 +5,10 @@ namespace Pablobaenas\PickupSystem\Block\Adminhtml\Pickups;
 use Magento\Backend\Block\Widget\Form\Container;
 
 
+/**
+ * Class Edit
+ * @package Pablobaenas\PickupSystem\Block\Adminhtml\Pickups
+ */
 class Edit extends Container
 {
     /**
@@ -33,6 +37,9 @@ class Edit extends Container
     }
 
 
+    /**
+     * Class constructor
+     */
     protected function _construct()
     {
         $this->_objectId = 'id';
@@ -48,6 +55,10 @@ class Edit extends Container
     }
 
 
+    /**
+     * Set Add or Edit title
+     * @return \Magento\Framework\Phrase|string
+     */
     public function getHeaderText()
     {
         $id = $this->getId();
@@ -57,6 +68,7 @@ class Edit extends Container
             return __('Edit Pickup Point');
         }
     }
+
 
     public function getId()
     {

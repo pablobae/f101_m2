@@ -1,5 +1,11 @@
 <?php
-
+/**
+ *  Database data installer
+ *
+ * @package Pablobaenas_PickupSystem
+ * @author  Pablo Baenas
+ * @created 2020-07-03
+ */
 namespace Pablobaenas\PickupSystem\Setup;
 
 use Magento\Cms\Model\BlockFactory;

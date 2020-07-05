@@ -1,10 +1,21 @@
 <?php
 
+/**
+ * Action class to edit pickup points
+ *
+ * @package Pablobaenas_PickupSystem
+ * @author  Pablo Baenas
+ * @created 2020-07-03
+ */
 namespace Pablobaenas\PickupSystem\Controller\Adminhtml\Pickups;
 
 use Magento\Backend\App\Action;
 
 
+/**
+ * Class Edit
+ * @package Pablobaenas\PickupSystem\Controller\Adminhtml\Pickups
+ */
 class Edit extends Action
 {
     /**
@@ -42,15 +53,12 @@ class Edit extends Action
     }
 
 
+
     protected function _isAllowed()
     {
         return $this->_authorization->isAllowed('Pablobaenas_PickupSystem::manage');
     }
 
-    /**
-     * @return \Magento\Backend\Model\View\Result\Page|\Magento\Backend\Model\View\Result\Redirect
-     * @SuppressWarnings(PHPMD.NPathComplexity)
-     */
     public function execute()
     {
         return $this->resultForwardFactory->create()->forward('new');

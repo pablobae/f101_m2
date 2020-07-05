@@ -1,9 +1,19 @@
 <?php
-
+/**
+ * List contents of pablobaenas_pickupsystem table
+ *
+ * @package Pablobaenas_PickupSystem
+ * @author  Pablo Baenas
+ * @created 2020-07-03
+ */
 namespace Pablobaenas\PickupSystem\Block\Adminhtml\Pickups\Edit;
 
 use Magento\Backend\Block\Widget\Form\Generic;
 
+/**
+ * Class Form
+ * @package Pablobaenas\PickupSystem\Block\Adminhtml\Pickups\Edit
+ */
 class Form extends Generic
 {
 
@@ -11,7 +21,13 @@ class Form extends Generic
      * @var Pablobaenas\PickupSystem\Model\PickupsFactory
      */
     protected $pickupsFactory;
+    /**
+     * @var \Pablobaenas\PickupSystem\Model\Source\ShippingMethod
+     */
     protected $shippingMethod;
+    /**
+     * @var \Pablobaenas\PickupSystem\Model\Source\Status
+     */
     protected $status;
 
     /**
@@ -36,6 +52,10 @@ class Form extends Generic
         parent::__construct($context, $registry, $formFactory, $data);
     }
 
+    /**
+     * @return Form|void
+     * @throws \Magento\Framework\Exception\LocalizedException
+     */
     protected function _prepareLayout()
     {
         parent::_prepareLayout();

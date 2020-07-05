@@ -1,19 +1,45 @@
 <?php
-
+/**
+ * Controller Action class to add new pickup point
+ *
+ * @package Pablobaenas_PickupSystem
+ * @author  Pablo Baenas
+ * @created 2020-07-03
+ */
 namespace Pablobaenas\PickupSystem\Controller\Adminhtml\Pickups;
 
 use Magento\Backend\App\Action;
 
+/**
+ * Class NewAction
+ * @package Pablobaenas\PickupSystem\Controller\Adminhtml\Pickups
+ */
 class NewAction extends Action
 {
 
+    /**
+     * @var \Magento\Framework\Registry
+     */
     protected $_coreRegistry;
 
+    /**
+     * @var \Magento\Backend\Model\View\Result\ForwardFactory
+     */
     protected $resultForwardFactory;
 
+    /**
+     * @var \Magento\Framework\View\Result\PageFactory
+     */
     protected $resultPageFactory;
 
 
+    /**
+     * NewAction constructor.
+     * @param Action\Context $context
+     * @param \Magento\Framework\Registry $coreRegistry
+     * @param \Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory
+     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
+     */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\Registry $coreRegistry,

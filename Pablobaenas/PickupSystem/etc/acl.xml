@@ -6,13 +6,6 @@
                 <resource id="Pablobaenas_PickupSystem::pickupsystem" title="Pickup System" sortOrder="51">
                     <resource id="Pablobaenas_PickupSystem::manage" title="Manage Pickup" sortOrder="10"/>
                 </resource>
-                <!--                <resource id="Magento_Backend::stores">-->
-                <!--                    <resource id="Magento_Backend::stores_settings">-->
-                <!--                        <resource id="Magento_Config::config">-->
-                <!--                            <resource id="Pablobaenas_PickupPoints::pickupstores_config" title="Hello World"/>-->
-                <!--                        </resource>-->
-                <!--                    </resource>-->
-                <!--                </resource>-->
             </resource>
         </resources>
     </acl>
