@@ -63,6 +63,16 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                     'Shipping Method'
                 )
                 ->addColumn(
+                    'status',
+                    \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                    255,
+                    [
+                        'nullable' => false,
+                        'default' => true
+                    ],
+                    'Shipping Method'
+                )
+                ->addColumn(
                     'created_at',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
                     null,

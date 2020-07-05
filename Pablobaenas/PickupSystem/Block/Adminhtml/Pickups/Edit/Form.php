@@ -13,6 +13,7 @@ class Form extends Generic
      */
     protected $pickupsFactory;
     protected $shippingMethod;
+    protected $status;
 
     /**
      * @param \Magento\Backend\Block\Template\Context $context
@@ -27,10 +28,12 @@ class Form extends Generic
         \Magento\Framework\Data\FormFactory $formFactory,
         \Pablobaenas\PickupSystem\Model\PickupsFactory $pickupsFactory,
         \Pablobaenas\PickupSystem\Model\Source\ShippingMethod $shippingMethod,
+        \Pablobaenas\PickupSystem\Model\Source\Status $status,
         array $data = []
     ) {
         $this->pickupsFactory = $pickupsFactory;
         $this->shippingMethod = $shippingMethod;
+        $this->status = $status;
         parent::__construct($context, $registry, $formFactory, $data);
     }
 
@@ -100,6 +103,19 @@ class Form extends Generic
             ]
         );
 
+        $fieldset->addField(
+            'status',
+            'select',
+            [
+                'id' => 'status',
+                'name' => 'status',
+                'label' => __('Status'),
+                'title' => __('Status'),
+                'values' => $this->status->toOptionArray(),
+                'required' => true
+
+            ]
+        );
 
         if ($pickups->getId() !== null) {
             // If edit add id
@@ -117,6 +133,7 @@ class Form extends Generic
                     'latitude' => $pickups->getLatitude(),
                     'longitude' => $pickups->getLongitude(),
                     'shipping_method' => $pickups->getShippingMethod(),
+                    'status' => $pickups->getStatus(),
                 ]
             );
         }
